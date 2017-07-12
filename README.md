@@ -1,17 +1,19 @@
 # voiceAPIWebAPI
 ## 【1】Voice登録API
+音声認識デバイスから送信される会話の内容（テキスト）をサーバーに保存するAPI
+
 ### curlサンプル
 ```
 curl -H "Content-type: application/json" -X POST -d '{"voiceContent":"それでは今からブレストを始めたいと思います","tentativeUserId":"005","deviceSerialId":"jfioewgejgkoemkvoe678fe"}'
 ```
 
-### response header
+### request header
 ```properties
 "Content-type: application/json"
 ```
 - Content-type : application/json
 
-### response body
+### request body
 ```js
 {"voiceContent":"それでは今からブレストを始めたいと思います"
   ,"tentativeUserId":"005"
