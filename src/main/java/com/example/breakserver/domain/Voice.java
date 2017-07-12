@@ -17,4 +17,10 @@ public class Voice {
 	private String voiceContent;
 	private String tentativeUserId;
 	private String deviceSerialId;
+	
+	public Voice(String voiceContent,String tentativeUserId,String deviceSerialId){
+		this.voiceContent=voiceContent;
+		this.tentativeUserId=tentativeUserId;
+		this.deviceSerialId=deviceSerialId;
+	}
 }
