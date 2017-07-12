@@ -5,6 +5,12 @@
 curl -H "Content-type: application/json" -X POST -d '{"voiceContent":"それでは今からブレストを始めたいと思います","tentativeUserId":"005","deviceSerialId":"jfioewgejgkoemkvoe678fe"}'
 ```
 
+### response header
+```properties
+"Content-type: application/json"
+```
+- Content-type : application/json
+
 ### response body
 ```js
 {"voiceContent":"それでは今からブレストを始めたいと思います"
@@ -17,7 +23,7 @@ curl -H "Content-type: application/json" -X POST -d '{"voiceContent":"それで�
 
 
 ### response header
-```
+```properties
 HTTP/1.1 200
 Content-Type: application/json;charset=UTF-8
 ```
