@@ -1,7 +1,15 @@
 version: "2"
 
 services:
-  my-brester:
+  db:
+    image: postgres:9.6
+    container_name: breakdb
+    ports:
+      - "5432:5432" #restapi
+    network_mode: "common_network"
+    environment:
+      POSTGRES_PASSWORD: hogehoge
+  web:
     build: .
     image: brester:0.0.1
     container_name: brester
