@@ -4,8 +4,12 @@
 
 ### curlサンプル
 ```
-curl -H "Content-type: application/json" -X POST -d '{"voiceContent":"それでは今からブレストを始めたいと思います","tentativeUserId":"005","deviceSerialId":"jfioewgejgkoemkvoe678fe"}'
+curl -H "Content-type: application/json" -X POST -d '{"voiceContent":"それでは今からブレストを始めたいと思います","tentativeUserId":"005","deviceSerialId":"jfioewgejgkoemkvoe678fe"}' http://52.69.16.168/api/voice
 ```
+
+### request url
+method: POST
+url: http://52.69.16.168/api/voice
 
 ### request header
 ```properties
