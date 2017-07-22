@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="ja">
 <head>
 	<meta charset="UTF-8" />
 	<title>Brester</title>
@@ -7,8 +7,8 @@
 	<meta name="keywords" content="brester,ブレスター,ブレスト,ブレーンストーミング,便利,管理,ツール" />
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
 	<!-- ogp -->
-	<meta property="og:title" content="" />
-	<meta property="og:description" content="「" />
+	<meta property="og:title" content="Brester" />
+	<meta property="og:description" content="ブレストを行うファシリテーターに向けた管理ツールです。" />
 	<meta property="og:url" content="" />
 	<meta property="og:image" content="" />
 	<meta property="og:type" content="website" />
@@ -27,17 +27,16 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
 	<!-- /favicon&icon -->
+	<link rel="stylesheet" href="css/style.css">
+
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
 	<link rel="stylesheet" href="css/drawer.css" media="screen and (max-width:767px)" />
 	<!-- /css -->
-	
-	<!-- 今回の設定 -->
-	<link rel="stylesheet" href="../static/css/style.css" th:attr="href=@{/css/style.css}" />
-	
+
 	<!-- クライアント用websocketの設定 -->
-	<script src="/webjars/sockjs-client/1.0.2/sockjs.js"></script>
-	<script src="/webjars/stomp-websocket/2.3.3/stomp.js"></script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.0.2/sockjs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
 </head>
 <body class="drawer drawer--right" onload="connect();">
 	<header>
@@ -80,7 +79,7 @@
 					</div>
 					<!-- /.main_box_l -->
 					<div class="main_box_r">
-						<p>みなさま！おはようございます！！<br />きょうは10時からよろしくお願いします！！！</p>
+						<p>みなさま！おはようございます！！これはサンプルメッセージです。</p>
 					</div>
 				</div>
 			</div>
@@ -102,7 +101,7 @@
 });
 </script>
 <!--/* 今回用の設定 */-->
-<script type="text/javascript" src="../static/js/chat.js" th:attr="src=@{/js/chat.js}"></script>
+<script type="text/javascript" src="js/chat.js"></script>
 
 </body>
 </html>

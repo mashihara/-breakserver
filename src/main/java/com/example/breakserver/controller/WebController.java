@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class WebController {
 	@GetMapping(path="/")
 	String top(Model model){
-		return "index";
+		return "/index.html";
 	}
 }
