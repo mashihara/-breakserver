@@ -29,9 +29,6 @@ public class MyStompService {
 
     StompSession stompSession;
 
-	public MyStompService(){
-	}
-
     public StompSession connect() {
         String url = "ws://localhost:8080/websocketEndpoint/0";
         
@@ -58,7 +55,9 @@ public class MyStompService {
     }
 
     public void sendHello(Voice voice) {
-		connect();
+    	if(stompSession==null){
+    		connect();
+    	}
         stompSession.send("/app/comments", voice);
     }
 
