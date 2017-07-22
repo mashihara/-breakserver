@@ -1,0 +1,655 @@
+@charset "UTF-8";
+/*=====================================================
+ *                        reset                  
+ *===================================================*/
+/* line 6, ../scss/_reset.scss */
+body {
+  font-family: inherit;
+}
+
+/* line 7, ../scss/_reset.scss */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 28, ../scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 32, ../scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 37, ../scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 41, ../scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 45, ../scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 51, ../scss/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+/* line 60, ../scss/_reset.scss */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+/* line 67, ../scss/_reset.scss */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 74, ../scss/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 78, ../scss/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 83, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+/* line 89, ../scss/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 98, ../scss/_reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 102, ../scss/_reset.scss */
+img {
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+}
+
+/*=====================================================
+ *                    functions                  
+ *===================================================*/
+/*-----------------------------------------------------
+ * clearfix
+ *---------------------------------------------------*/
+/* line 10, ../scss/_asset.scss */
+.cf::after {
+  clear: both;
+}
+
+/* line 14, ../scss/_asset.scss */
+.cf::before,
+.cf::after {
+  content: " ";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/*-----------------------------------------------------
+ * pc or smartphone view setting
+ *---------------------------------------------------*/
+/* line 25, ../scss/_asset.scss */
+.pc_view {
+  display: block;
+}
+
+/* line 28, ../scss/_asset.scss */
+.sp_view {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 32, ../scss/_asset.scss */
+  .pc_view {
+    display: none;
+  }
+
+  /* line 35, ../scss/_asset.scss */
+  .sp_view {
+    display: block;
+  }
+}
+/*-----------------------------------------------------
+ * margin setting
+ *---------------------------------------------------*/
+/* line 43, ../scss/_asset.scss */
+.mb5 {
+  margin-bottom: 5px;
+}
+
+/* line 46, ../scss/_asset.scss */
+.mb10 {
+  margin-bottom: 10px;
+}
+
+/* line 49, ../scss/_asset.scss */
+.mb15 {
+  margin-bottom: 15px;
+}
+
+/* line 52, ../scss/_asset.scss */
+.mb20 {
+  margin-bottom: 20px;
+}
+
+/* line 55, ../scss/_asset.scss */
+.mb25 {
+  margin-bottom: 25px;
+}
+
+/* line 58, ../scss/_asset.scss */
+.mb30 {
+  margin-bottom: 30px;
+}
+
+/* line 61, ../scss/_asset.scss */
+.mb35 {
+  margin-bottom: 35px;
+}
+
+/* line 64, ../scss/_asset.scss */
+.mb40 {
+  margin-bottom: 40px;
+}
+
+/* line 67, ../scss/_asset.scss */
+.mb45 {
+  margin-bottom: 45px;
+}
+
+/* line 70, ../scss/_asset.scss */
+.mb50 {
+  margin-bottom: 50px;
+}
+
+/* line 73, ../scss/_asset.scss */
+.mb55 {
+  margin-bottom: 55px;
+}
+
+/* line 76, ../scss/_asset.scss */
+.mb60 {
+  margin-bottom: 60px;
+}
+
+/* line 79, ../scss/_asset.scss */
+.mb65 {
+  margin-bottom: 65px;
+}
+
+/* line 82, ../scss/_asset.scss */
+.mb70 {
+  margin-bottom: 70px;
+}
+
+/* line 85, ../scss/_asset.scss */
+.mb75 {
+  margin-bottom: 75px;
+}
+
+/* line 88, ../scss/_asset.scss */
+.mb80 {
+  margin-bottom: 80px;
+}
+
+/* line 91, ../scss/_asset.scss */
+.mb85 {
+  margin-bottom: 85px;
+}
+
+/* line 94, ../scss/_asset.scss */
+.mb90 {
+  margin-bottom: 90px;
+}
+
+/* line 97, ../scss/_asset.scss */
+.mb95 {
+  margin-bottom: 95px;
+}
+
+/* line 100, ../scss/_asset.scss */
+.mb100 {
+  margin-bottom: 100px;
+}
+
+/* line 104, ../scss/_asset.scss */
+.mr5 {
+  margin-right: 5px;
+}
+
+/* line 107, ../scss/_asset.scss */
+.mr10 {
+  margin-right: 10px;
+}
+
+/* line 110, ../scss/_asset.scss */
+.mr15 {
+  margin-right: 15px;
+}
+
+/* line 113, ../scss/_asset.scss */
+.mr20 {
+  margin-right: 20px;
+}
+
+/* line 116, ../scss/_asset.scss */
+.mr25 {
+  margin-right: 25px;
+}
+
+/* line 119, ../scss/_asset.scss */
+.mr30 {
+  margin-right: 30px;
+}
+
+/* line 122, ../scss/_asset.scss */
+.mr35 {
+  margin-right: 35px;
+}
+
+/* line 125, ../scss/_asset.scss */
+.mr40 {
+  margin-right: 40px;
+}
+
+/* line 128, ../scss/_asset.scss */
+.mr45 {
+  margin-right: 45px;
+}
+
+/* line 131, ../scss/_asset.scss */
+.mr50 {
+  margin-right: 50px;
+}
+
+/* line 134, ../scss/_asset.scss */
+.mr55 {
+  margin-right: 55px;
+}
+
+/* line 137, ../scss/_asset.scss */
+.mr60 {
+  margin-right: 60px;
+}
+
+/* line 140, ../scss/_asset.scss */
+.mr65 {
+  margin-right: 65px;
+}
+
+/* line 143, ../scss/_asset.scss */
+.mr70 {
+  margin-right: 70px;
+}
+
+/* line 146, ../scss/_asset.scss */
+.mr75 {
+  margin-right: 75px;
+}
+
+/* line 149, ../scss/_asset.scss */
+.mr80 {
+  margin-right: 80px;
+}
+
+/* line 152, ../scss/_asset.scss */
+.mr85 {
+  margin-right: 85px;
+}
+
+/* line 155, ../scss/_asset.scss */
+.mr90 {
+  margin-right: 90px;
+}
+
+/* line 158, ../scss/_asset.scss */
+.mr95 {
+  margin-right: 95px;
+}
+
+/* line 161, ../scss/_asset.scss */
+.mr100 {
+  margin-right: 100px;
+}
+
+/*-----------------------------------------------------
+ * center position
+ *---------------------------------------------------*/
+/* line 168, ../scss/_asset.scss */
+.center_adjust_parent {
+  position: relative;
+}
+
+/* line 172, ../scss/_asset.scss */
+.center_adjust_child {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+
+/*-----------------------------------------------------
+ * triangle shape
+ *---------------------------------------------------*/
+/*-----------------------------------------------------
+ * font setting
+ *---------------------------------------------------*/
+/*=====================================================
+*                   style.scss                  
+*===================================================*/
+/*-----------------------------------------------------
+*                   common parts                  
+*---------------------------------------------------*/
+/* line 14, ../scss/style.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 17, ../scss/style.scss */
+html {
+  font-size: 62.5%;
+  background: #333333;
+  font-family: "Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic", sans-serif;
+}
+
+/* line 23, ../scss/style.scss */
+body {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  text-align: left;
+}
+
+/* line 29, ../scss/style.scss */
+.row {
+  max-width: 960px;
+  width: 100%;
+  height: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* line 37, ../scss/style.scss */
+a {
+  text-decoration: none;
+  color: #bbbbbb;
+}
+
+/*=====================================================
+*                   index                  
+*===================================================*/
+/*-----------------------------------------------------
+*                   header                  
+*---------------------------------------------------*/
+/* line 48, ../scss/style.scss */
+header {
+  background: #333333;
+}
+/* line 50, ../scss/style.scss */
+header .row {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+/* line 55, ../scss/style.scss */
+header .row h1 {
+  padding-top: 16px;
+}
+/* line 58, ../scss/style.scss */
+header .row nav {
+  width: 40%;
+  padding-top: 33px;
+}
+/* line 61, ../scss/style.scss */
+header .row nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 64, ../scss/style.scss */
+header .row nav ul li {
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+/* line 67, ../scss/style.scss */
+header .row nav ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+}
+/* line 72, ../scss/style.scss */
+header .row nav ul li:hover {
+  border-bottom: 1px solid #40bef9;
+  transition: 0.3s;
+}
+/* line 76, ../scss/style.scss */
+header .row nav ul .here {
+  border-bottom: 1px solid #40bef9;
+}
+
+/*-----------------------------------------------------
+*                   main                  
+*---------------------------------------------------*/
+/* line 87, ../scss/style.scss */
+main {
+  background: #ffffff;
+}
+/* line 90, ../scss/style.scss */
+main .row .main_area {
+  padding: 100px 0;
+  height: 600px;
+  overflow-y: scroll;
+}
+/* line 94, ../scss/style.scss */
+main .row .main_area .main_block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+/* line 98, ../scss/style.scss */
+main .row .main_area .main_block .main_box_l {
+  width: 21.4%;
+}
+/* line 100, ../scss/style.scss */
+main .row .main_area .main_block .main_box_l ul {
+  background: url("../img/under.png") bottom left no-repeat;
+}
+/* line 102, ../scss/style.scss */
+main .row .main_area .main_block .main_box_l ul li {
+  color: #999999;
+  padding-bottom: 20px;
+}
+/* line 106, ../scss/style.scss */
+main .row .main_area .main_block .main_box_l ul li:last-child {
+  color: #d0d0d0;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+/* line 113, ../scss/style.scss */
+main .row .main_area .main_block .main_box_r {
+  width: 70%;
+  background: #b9b9b9;
+  padding: 20px 15px;
+  border-radius: 7px;
+  box-sizing: border-box;
+  font-size: 22px;
+  line-height: 30px;
+}
+/* line 121, ../scss/style.scss */
+main .row .main_area .main_block .main_box_r p {
+  color: white;
+  font-weight: lighter;
+}
+
+/*-----------------------------------------------------
+*                   footer                  
+*---------------------------------------------------*/
+/* line 135, ../scss/style.scss */
+footer {
+  background: #333333;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: #bbbbbb;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+
+@media only screen and (max-width: 767px) {
+  /* line 148, ../scss/style.scss */
+  .row {
+    width: 96%;
+  }
+
+  /* line 152, ../scss/style.scss */
+  header .row {
+    height: 70px;
+    display: flex;
+    align-items: center;
+  }
+  /* line 156, ../scss/style.scss */
+  header .row h1 {
+    padding-top: 0;
+  }
+  /* line 159, ../scss/style.scss */
+  header .row h1 img {
+    width: 70%;
+  }
+  /* line 163, ../scss/style.scss */
+  header .row nav {
+    padding-top: 0px;
+  }
+  /* line 166, ../scss/style.scss */
+  header .row nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  /* line 171, ../scss/style.scss */
+  header .row nav ul li {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  /* line 174, ../scss/style.scss */
+  header .row nav ul li a {
+    color: #bbbbbb;
+    text-decoration: none;
+  }
+  /* line 179, ../scss/style.scss */
+  header .row nav ul li:hover {
+    border-bottom: none;
+  }
+  /* line 182, ../scss/style.scss */
+  header .row nav ul li:first-child {
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background: #fafafa;
+  }
+  /* line 186, ../scss/style.scss */
+  header .row nav ul li:first-child img {
+    width: 15%;
+  }
+  /* line 190, ../scss/style.scss */
+  header .row nav ul .here {
+    border-bottom: none;
+  }
+  /* line 192, ../scss/style.scss */
+  header .row nav ul .here a {
+    color: white;
+  }
+
+  /* line 203, ../scss/style.scss */
+  main .row .main_area {
+    padding: 50px 0;
+  }
+  /* line 206, ../scss/style.scss */
+  main .row .main_area .main_block {
+    width: 100%;
+    flex-direction: column;
+  }
+  /* line 212, ../scss/style.scss */
+  main .row .main_area .main_block .main_box_l {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  /* line 215, ../scss/style.scss */
+  main .row .main_area .main_block .main_box_l ul {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+  }
+  /* line 220, ../scss/style.scss */
+  main .row .main_area .main_block .main_box_l ul li {
+    padding-bottom: 0;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  /* line 225, ../scss/style.scss */
+  main .row .main_area .main_block .main_box_l ul li:last-child {
+    padding-bottom: 0;
+    font-size: 16px;
+    margin-right: 0;
+  }
+  /* line 232, ../scss/style.scss */
+  main .row .main_area .main_block .main_box_r {
+    width: 100%;
+    font-size: 20px;
+    line-height: inherit;
+  }
+}

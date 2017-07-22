@@ -1,5 +1,7 @@
 package com.example.breakserver.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
@@ -10,7 +12,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Voice {
+public class Voice implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY) //postgersの場合、GeneratedValueにこれがいる
 	private Integer voiceId;

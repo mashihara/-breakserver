@@ -1,23 +1,108 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
-    <title>顧客一覧</title>
-    <link rel="stylesheet" type="text/css"
-        href="../../static/css/style.css"
-        th:href="@{/css/style.css}"/>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}"/>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-        th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css}"/>
+	<meta charset="UTF-8" />
+	<title>Brester</title>
+	<meta name="description" content="ブレストを行うファシリテーターに向けた管理ツールです。" />
+	<meta name="keywords" content="brester,ブレスター,ブレスト,ブレーンストーミング,便利,管理,ツール" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+	<!-- ogp -->
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="「" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:locale" content="ja_JP" />
+	<!-- <meta property="fb:app_id" content="345330002549426" /> -->
+	<!-- /ogp -->
+	<!-- favicon&icon -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+	<!-- /favicon&icon -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+	<link rel="stylesheet" href="css/drawer.css" media="screen and (max-width:767px)" />
+	<!-- /css -->
+	
+	<!-- 今回の設定 -->
+	<link rel="stylesheet" href="../static/css/style.css" th:attr="href=@{/css/style.css}" />
+	
+	<!-- クライアント用websocketの設定 -->
+	<script src="/webjars/sockjs-client/1.0.2/sockjs.js"></script>
+	<script src="/webjars/stomp-websocket/2.3.3/stomp.js"></script>
+	
 </head>
-<body>
-<!-- 本体 -->
-<h1>ほげげん</h1>
-<!-- </body>の直前 -->
-<script src="https://ajax.googleapis.com/ajax/lib/jquery/1.11.1/jquery.min.js"
-	th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-	th:src="@{/webjars/bootstrap/3.3.7/js/bootstrap.min.js}"></script>
+<body class="drawer drawer--right" onload="connect();">
+	<header>
+		<div class="row">
+			<h1><a href="#"><img src="img/logo.png" alt="logo" /></a></h1>
+			<!-- ハンバーガーボタン -->
+			<div class="sp_view">
+				<button type="button" class="drawer-toggle drawer-hamburger">
+					<span class="sr-only">toggle navigation</span>
+					<span class="drawer-hamburger-icon"></span>
+				</button>
+			</div>
+			<nav class="drawer-nav">
+				<ul class="drawer-menu">
+					<li class="sp_view"><a href="#"><img src="img/logo.png" alt="logo" /></a></li>
+					<li class="here"><a href="#">A mode</a></li>
+					<li><a href="#">B mode</a></li>
+					<li><a href="#">111 room</a></li>
+					<li><a href="#">login</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- /.row -->
+	</header>
+
+	<main>
+		<div class="row">
+			<div id="room"></div>
+			<div id="conversationDiv">
+				<label>メッセージ</label><input type="text" id="comment" />
+				<button id="sendName" onclick="sendMessage();">送る</button>
+			</div>
+			<div class="main_area">
+				<div class="main_block">
+					<div class="main_box_l">
+						<ul>
+							<li>mashihara</li>
+							<li>8:24 AM</li>
+						</ul>
+					</div>
+					<!-- /.main_box_l -->
+					<div class="main_box_r">
+						<p>みなさま！おはようございます！！<br />きょうは10時からよろしくお願いします！！！</p>
+					</div>
+				</div>
+			</div>
+		<!-- /.main_area -->
+		</div>
+		<!-- /.row -->
+	</main>
+
+	<footer>
+		<small>copyright&copy;brester</small>
+	</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/drawer.min.js"></script>
+<script>
+	$(document).ready(function() {
+	$(".drawer").drawer();
+});
+</script>
+<!--/* 今回用の設定 */-->
+<script type="text/javascript" src="../static/js/chat.js" th:attr="src=@{/js/chat.js}"></script>
+
 </body>
 </html>
