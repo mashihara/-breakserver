@@ -1,5 +1,7 @@
 package com.example.breakserver.controller;
 
+import java.time.LocalDateTime;
+
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -15,6 +17,8 @@ public class ChatController {
 	@MessageMapping("/comments") // エンドポイントの指定
     @SendTo("/topic/comments") // メッセージの宛先を指定
     public Voice greeting(Voice voice) {
+		LocalDateTime d = LocalDateTime.now();
+		voice.setCreatedDate(d);
 		return voice;
     }
 	

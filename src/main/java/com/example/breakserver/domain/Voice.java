@@ -1,6 +1,7 @@
 package com.example.breakserver.domain;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -13,6 +14,8 @@ import javax.persistence.Id;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,7 +34,8 @@ public class Voice implements Serializable {
 	private String voiceContent;
 	private String tentativeUserId;
 	private String deviceSerialId;
-	@CreatedDate private LocalTime createdHinichi;
+	@JsonFormat(pattern = "M/d H:m")
+	@CreatedDate private LocalDateTime createdDate;
 
 	public Voice(String voiceContent,String tentativeUserId,String deviceSerialId){
 		this.voiceContent=voiceContent;
