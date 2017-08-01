@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8" />
+	<title>Brester</title>
+	<meta name="description" content="ブレストを行うファシリテーターに向けた管理ツールです。" />
+	<meta name="keywords" content="brester,ブレスター,ブレスト,ブレーンストーミング,便利,管理,ツール" />
+	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+	<!-- ogp -->
+	<meta property="og:title" content="Brester" />
+	<meta property="og:description" content="ブレストを行うファシリテーターに向けた管理ツールです。" />
+	<meta property="og:url" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:locale" content="ja_JP" />
+	<!-- <meta property="fb:app_id" content="345330002549426" /> -->
+	<!-- /ogp -->
+	<!-- favicon&icon -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+	<!-- /favicon&icon -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+	<link rel="stylesheet" href="css/drawer.css" media="screen and (max-width:767px)" />
+	<!-- /css -->
+
+	<!-- クライアント用websocketの設定 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.0.2/sockjs.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+
+</head>
+<body class="drawer drawer--right" onload="connect();">
+	<header>
+		<div class="row">
+			<h1><a href="#"><img src="img/logo.png" alt="logo" /></a></h1>
+			<!-- ハンバーガーボタン -->
+			<div class="sp_view">
+				<button type="button" class="drawer-toggle drawer-hamburger">
+					<span class="sr-only">toggle navigation</span>
+					<span class="drawer-hamburger-icon"></span>
+				</button>
+			</div>
+			<nav class="drawer-nav">
+				<ul class="drawer-menu">
+					<li class="sp_view"><a href="#"><img src="img/logo.png" alt="logo" /></a></li>
+					<li class="here"><a href="#">A mode</a></li>
+					<li><a href="#">B mode</a></li>
+					<li><a href="#">111 room</a></li>
+					<li><a href="#">login</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- /.row -->
+	</header>
+
+	<main>
+		<div class="row">
+			<div id="room"></div>
+			<div id="conversationDiv">
+				<label>メッセージ</label><input type="text" id="comment" />
+				<button id="sendName" onclick="sendMessage();">送る</button>
+			</div>
+			<div class="main_area">
+				<div class="main_block">
+					<div class="main_box_l">
+						<ul>
+							<li>mashihara</li>
+							<li>8:24 AM</li>
+						</ul>
+					</div>
+					<!-- /.main_box_l -->
+					<div class="main_box_r">
+						<p>みなさま！おはようございます！！これはサンプルメッセージです。</p>
+					</div>
+				</div>
+			</div>
+		<!-- /.main_area -->
+		</div>
+		<!-- /.row -->
+	</main>
+
+	<footer>
+		<small>copyright&copy;brester</small>
+	</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/drawer.min.js"></script>
+<script>
+	$(document).ready(function() {
+	$(".drawer").drawer();
+});
+</script>
+<!--/* 今回用の設定 */-->
+<script type="text/javascript" src="js/chat.js"></script>
+
+</body>
+</html>
