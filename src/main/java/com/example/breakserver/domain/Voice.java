@@ -35,8 +35,9 @@ public class Voice implements Serializable {
 	private String tentativeUserId;
 	private String deviceSerialId;
 	@JsonFormat(pattern = "M/d H:m")
-	@CreatedDate private LocalDateTime createdDate;
-
+	@CreatedDate
+	private LocalDateTime createdDate;
+	private boolean negativeFlg;
 	public Voice(String voiceContent,String tentativeUserId,String deviceSerialId){
 		this.voiceContent=voiceContent;
 		this.tentativeUserId=tentativeUserId;

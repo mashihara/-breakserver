@@ -43,12 +43,17 @@ function showComment(voice) {
     var main_block = $('<div>').addClass('main_block');
     var main_box_l = $('<div>').addClass('main_box_l');
     var main_box_r = $('<div>').addClass('main_box_r');
-    main_box_l.append($('<ul>').append($('<li>').text(JSON.parse(voice.body).tentativeUserId)).append($('<li>').text(JSON.parse(voice.body).createdDate)));
-    main_box_r.append($('<p>').text(JSON.parse(voice.body).voiceContent));
+    var voicejson = JSON.parse(voice.body);
+    main_box_l.append($('<ul>').append($('<li>').text(voicejson.tentativeUserId)).append($('<li>').text(voicejson.createdDate)));
+    main_box_r.append($('<p>').text(voicejson.voiceContent));
     main_block.append(main_box_l).append(main_box_r);
     $('.main_area').append(main_block);
-    
-    //TODO
-    //スクロールを一番下に下げる
-};
-
+    if(voicejson.negativeFlg){
+        main_block.animate(
+        		{opacity: '0'},
+        		{duration: 10000,complete: function(){
+        			 main_block.css({'display':'none'});
+        		}}
+        );
+    }
+}
