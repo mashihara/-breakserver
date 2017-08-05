@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class DocumentSentiment{
-    int magnitude;
-    int score;
+    Double magnitude;
+    Double score;
 }

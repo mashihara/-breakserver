@@ -56,4 +56,7 @@ function showComment(voice) {
         		}}
         );
     }
+    $('body').delay(100).animate({
+        scrollTop: $(document).height()
+      },1500);
 }

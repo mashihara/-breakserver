@@ -494,7 +494,6 @@ main {
 /* line 90, ../scss/style.scss */
 main .row .main_area {
   padding: 100px 0;
-  height: 600px;
   overflow-y: scroll;
 }
 /* line 94, ../scss/style.scss */

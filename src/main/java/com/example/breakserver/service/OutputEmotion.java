@@ -7,10 +7,10 @@ import lombok.Data;
 
 @Data
 public class OutputEmotion {
-	Map<String,String> documentSentiment;
+	DocumentSentiment documentSentiment;
     String language;
     List<Sentence> sentences;
     public double getScore(){
-    	return Double.valueOf(documentSentiment.get("score"));
+    	return documentSentiment.getScore();
     }
 }
